@@ -1,3 +1,6 @@
+var languageButtonsEl = document.querySelector("#language-buttons")
+
+
 var getUserRepos = function(user) {
      // format the github api url
   var apiUrl = "https://api.github.com/users/" + user + "/repos";
@@ -90,3 +93,4 @@ var repoContainerEl = document.querySelector("#repos-container");
 var repoSearchTerm = document.querySelector("#repo-search-term");
 
   userFormEl.addEventListener("submit", formSubmitHandler);
+  languageButtonsEl.addEventListener("click", buttonClickHandler);
