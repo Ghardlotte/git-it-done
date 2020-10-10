@@ -89,6 +89,16 @@ repoEl.appendChild(statusEl);
   console.log(searchTerm);
   };
 
+  var buttonCLickHandler = function(event) {
+    var language = event.target.getAttribute("data-language")
+    if (language) {
+      getFeaturedRepos(language);
+    
+      // clear old content
+      repoContainerEl.textContent = "";
+    }
+  }
+
 var repoContainerEl = document.querySelector("#repos-container");
 var repoSearchTerm = document.querySelector("#repo-search-term");
 
